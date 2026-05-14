@@ -1,3 +1,13 @@
 {
-  "sent_urls": []
+  "sent_urls": [
+    "https://simonwillison.net/2026/May/6/code-w-claude-2026/",
+    "https://www.anthropic.com/news/claude-opus-4-7",
+    "https://releasebot.io/updates/anthropic/claude-code",
+    "https://www.macrumors.com/2026/05/07/openai-codex-chrome-extension/",
+    "https://letsdatascience.com/news/openai-codex-reaches-90m-installs-in-one-week-869a9c86",
+    "https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/",
+    "https://www.cnbc.com/2026/05/12/google-races-put-gemini-at-center-of-android-before-apples-ai-reboot.html",
+    "https://blog.google/products-and-platforms/platforms/android/meet-googlebook/",
+    "https://www.androidheadlines.com/2026/05/google-home-gemini-family-context-speed-may-2026-update.html"
+  ]
 }
