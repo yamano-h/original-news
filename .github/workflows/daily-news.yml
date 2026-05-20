@@ -1,0 +1,39 @@
+name: Daily AI News to Slack
+
+on:
+  schedule:
+    # 毎朝9:00 JST (= 00:00 UTC)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  send-news:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic/claude-code
+
+      - name: Run daily news task
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SLACK_MCP_TOKEN: ${{ secrets.SLACK_MCP_TOKEN }}
+        run: |
+          claude \
+            --dangerously-skip-permissions \
+            -p "$(cat daily_news_prompt.md)"
+
+      - name: Commit updated sent_articles.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sent_articles.json
+          git diff --cached --quiet || git commit -m "chore: update sent_articles.json [skip ci]"
+          git push
