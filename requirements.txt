@@ -1,0 +1,2 @@
+duckduckgo-search>=6.2.0
+slack-sdk>=3.31.0
