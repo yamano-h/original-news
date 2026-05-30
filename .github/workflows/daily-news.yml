@@ -1,0 +1,38 @@
+name: Daily AI News → Slack DM
+
+on:
+  schedule:
+    # 毎朝9:00 JST (= 00:00 UTC)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  send-news:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic slack-sdk
+
+      - name: Run daily news script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_USER_ID: DM6UXN0CC
+        run: python daily_news.py
+
+      - name: Commit updated sent_articles.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sent_articles.json
+          git diff --staged --quiet || git commit -m "chore: update sent_articles.json [skip ci]"
+          git push
