@@ -1,13 +1,20 @@
 {
   "sent_urls": [
-    "https://simonwillison.net/2026/May/6/code-w-claude-2026/",
-    "https://www.anthropic.com/news/claude-opus-4-7",
-    "https://releasebot.io/updates/anthropic/claude-code",
-    "https://www.macrumors.com/2026/05/07/openai-codex-chrome-extension/",
-    "https://letsdatascience.com/news/openai-codex-reaches-90m-installs-in-one-week-869a9c86",
-    "https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/",
-    "https://www.cnbc.com/2026/05/12/google-races-put-gemini-at-center-of-android-before-apples-ai-reboot.html",
+    "https://ai.google.dev/gemini-api/docs/changelog",
     "https://blog.google/products-and-platforms/platforms/android/meet-googlebook/",
-    "https://www.androidheadlines.com/2026/05/google-home-gemini-family-context-speed-may-2026-update.html"
+    "https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/",
+    "https://cloud.google.com/blog/products/ai-machine-learning/innovations-from-google-io-26-on-google-cloud",
+    "https://letsdatascience.com/news/openai-codex-reaches-90m-installs-in-one-week-869a9c86",
+    "https://openai.com/index/codex-for-knowledge-work/",
+    "https://releasebot.io/updates/anthropic/claude-code",
+    "https://simonwillison.net/2026/May/6/code-w-claude-2026/",
+    "https://techcrunch.com/2026/05/19/google-updates-its-gemini-app-to-take-on-chatgpt-and-claude-at-io-2026/",
+    "https://techcrunch.com/2026/06/02/openai-launches-new-codex-tools-for-white-collar-work/",
+    "https://www.androidheadlines.com/2026/05/google-home-gemini-family-context-speed-may-2026-update.html",
+    "https://www.anthropic.com/news/claude-opus-4-7",
+    "https://www.anthropic.com/news/claude-opus-4-8",
+    "https://www.cnbc.com/2026/05/12/google-races-put-gemini-at-center-of-android-before-apples-ai-reboot.html",
+    "https://www.infoq.com/news/2026/05/code-with-claude/",
+    "https://www.macrumors.com/2026/05/07/openai-codex-chrome-extension/"
   ]
 }
